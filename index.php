@@ -24,18 +24,23 @@ if(isset($_POST["submit"])){
 <head>
     <title>Php data form</title>
 </head>
-<!-- <style>
-    form{
-        border: "solid 1px red"
+<style>
+    input{
+        margin-top: 20px;
     }
-</style> -->
+    select{
+        margin-top: 20px;
+    }
+    button{
+        margin-top: 20pqs   xewex;
+    }
+</style>
 <body>
 
 <form class="" action="" method="post" autocomplete="">
 <label for="">Name</label>
  <input type="text"  name="name" required>
  <br>
- <label for="">Age</label>
  <input type="text"  name="age" required> 
  <br>
  <label for="">country</label>
