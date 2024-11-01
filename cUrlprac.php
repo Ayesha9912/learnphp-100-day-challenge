@@ -34,8 +34,8 @@ $string_name = 'php books';
 $url = "http://amazon.com/s/field-keywords=$string_name";
 $curl = curl_init();
 curl_setopt($curl,CURLOPT_URL, $url);
-curl_setopt($curla,CURLOPT_SSL_VERIFYPEER, false);
-curl_setopt($curla,CURLOPT_RETURNTRANSFER, TRUE);
+curl_setopt($curl,CURLOPT_SSL_VERIFYPEER, false);
+curl_setopt($curl,CURLOPT_RETURNTRANSFER, TRUE);
 
 $result = curl_exec($curl);
 
