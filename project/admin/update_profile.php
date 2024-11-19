@@ -21,7 +21,7 @@ if(isset($_POST['submit'])){
       }
    }
    $empty_pass = 'da39a3ee5e6b4b0d3255bfef95601890afd80709';
-   $select_prev_pass = $conn->prepare('SELECT password FROM admin WHERE id = ?');
+   $select_prev_pass = $conn->prepare('SELECT password FROM `admin` WHERE id = ?');
    $select_prev_pass->execute([$admin_id]);
    $fetch_prev_pass = $select_prev_pass->fetch(PDO :: FETCH_ASSOC);
    $prev_pass = $fetch_prev_pass['password'];
@@ -41,10 +41,9 @@ if(isset($_POST['submit'])){
      }
      else{
        if($new_pass != $empty_pass){
-        $update_pass = $conn-> prepare("UPDATE admin SET password = ? WHERE id = ?");
+        $update_pass = $conn-> prepare("UPDATE `admin` SET password = ? WHERE id = ?");
         $update_pass->execute([$c_pass, $admin_id]);
         $message[] = 'userpass Update!';
-         
        }
        else{
          $message[] = 'plaease enter new password!';

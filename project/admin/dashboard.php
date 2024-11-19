@@ -55,7 +55,7 @@ if(!isset($admin_id)){
     <div class="box">
         <?php
         $select_active_post = $conn->prepare("SELECT * FROM `posts` WHERE admin_id = ? AND status = ?");
-        $select_active_post->execute([$admin_id, 'active']);
+        $select_active_post->execute([$admin_id, 'deactive']);
         $number_of_active_post = $select_active_post->rowCount();
         ?>
         <h3><?=$number_of_active_post;?></h3>
